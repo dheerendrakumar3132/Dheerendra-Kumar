@@ -31,7 +31,8 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            width: 100%;
         }
 
         a { text-decoration: none; transition: 0.3s; }
@@ -109,6 +110,7 @@
         .hero-img-wrapper img {
             width: 350px;
             height: 350px;
+            max-width: 100%; /* Fix for mobile */
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid rgba(255,255,255,0.1);
@@ -159,7 +161,7 @@
             border-radius: 20px;
             padding: 50px;
             margin: 50px auto;
-            max-width: 1300px;
+            max-width: 100%; /* Changed to prevent overflow */
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -238,10 +240,13 @@
         footer { text-align: center; padding: 30px; color: #555; border-top: 1px solid #111; }
 
         @media (max-width: 900px) {
-            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-content { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+            .hero-text h1 { font-size: 2.5rem; }
             .hero-img-wrapper { order: -1; margin-bottom: 30px; }
             .nav-links { display: none; }
-            .company-section { flex-direction: column; text-align: center; }
+            .company-section { flex-direction: column; text-align: center; padding: 30px 20px; }
+            .about-content { padding: 30px 20px; }
+            .btn-outline { margin-left: 0; margin-top: 15px; }
         }
     </style>
 </head>
@@ -300,11 +305,11 @@
         </div>
         <div class="about-content">
             <p><strong>The Beginning:</strong> My journey into the digital world didn't start with drag-and-drop tools; it began with raw code. I spent years mastering the logic behind <strong>Backend Architecture and Database Management</strong>. This deep technical foundation allows me to solve complex problems that traditional designers often cannot handle.</p>
-            <br>
+            <br><br>
             <p><strong>The Evolution:</strong> While I love coding, I realized that modern businesses require speed and agility. That’s why I expanded my expertise to include <strong>Shopify, WordPress, and Wix</strong>. I combine my coding skills with these platforms to create custom, high-performance stores that are easy for my clients to manage.</p>
-            <br>
+            <br><br>
             <p><strong>The Mission:</strong> I noticed a gap in the market: developers who could code often didn't understand marketing, and marketers rarely understood code. To bridge this gap, I founded <strong>Equafusion.com</strong>. My goal is to provide a complete ecosystem—Development, Design, and Advertising—so you don't have to hire multiple agencies.</p>
-            <br>
+            <br><br>
             <p><strong>My Promise:</strong> When you work with me, you are not just a transaction. I believe in building long-term partnerships. That is why I offer <strong>24/7 Support</strong> to ensure your business never faces downtime.</p>
         </div>
     </section>
@@ -330,42 +335,42 @@
             <h2>My Core Expertise</h2>
         </div>
         <div class="services-grid">
-            
+            <br>
             <div class="card code">
                 <i class="fas fa-code"></i>
                 <h3>Custom Coding</h3>
                 <p>Full control over your website using <strong>HTML, CSS, JavaScript, and PHP</strong>. Ideal for unique designs and high-performance requirements.</p>
-            </div>
+            </div><br>
 
             <div class="card shopify">
                 <i class="fab fa-shopify"></i>
                 <h3>Shopify Expert</h3>
                 <p>Complete store setup, dropshipping integration, and theme customization to build high-converting E-commerce brands.</p>
-            </div>
+            </div><br>
 
             <div class="card wp">
                 <i class="fab fa-wordpress"></i>
                 <h3>WordPress & Woo</h3>
                 <p>Flexible business websites and blogs. I manage plugins, themes, and security to keep your site running smoothly.</p>
-            </div>
+            </div><br>
 
             <div class="card wix">
                 <i class="fab fa-wix"></i>
                 <h3>Wix Design</h3>
                 <p>Stunning, visual-first websites with drag-and-drop simplicity. Perfect for portfolios and small businesses.</p>
-            </div>
+            </div><br>
 
             <div class="card">
                 <i class="fas fa-bullhorn"></i>
                 <h3>Ads & SEO</h3>
                 <p>Strategic Google & Facebook Ads management to drive traffic, combined with advanced SEO strategies to reach page #1.</p>
-            </div>
+            </div><br>
 
             <div class="card">
                 <i class="fas fa-video"></i>
                 <h3>Video & Logo</h3>
                 <p>Creative Logo Design and professional Video Editing for Reels/Shorts to elevate your brand identity.</p>
-            </div>
+            </div><br>
 
         </div>
     </section>
@@ -397,7 +402,7 @@
     <section id="contact" class="contact-banner">
         <h2 style="font-size: 2.5rem; color: white;">Let's Work Together</h2>
         <p style="color: #aaa; margin-top: 10px;">Click below to chat instantly.</p>
-        
+        <br>
         <div class="social-links">
             <a href="https://wa.me/919140092735" class="social-btn whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> Chat on WhatsApp
